@@ -14,3 +14,4 @@ else
    ESX.ShowNotification("Unfortunately, you lost the game.")
 end
 ```
+https://discord.gg/dEv6tm2epA
