@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Funkcja kończąca grę
+  
     function endGame(success) {
         if (gameEnded) return;
         gameEnded = true;
