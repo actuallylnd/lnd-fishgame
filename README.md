@@ -4,14 +4,27 @@
 
 
 ```lua
-shakeIntensity: number | default is 6
+-- shakeIntensity: number | default is 6
+
+local shakeIntensity = 6 -- Default value
 
 local success = exports['lnd-fishgame']:FishGame(shakeIntensity)
 
 if success then
-   ESX.ShowNotification("Congratulations! You won the game!")
+    lib.notify({
+        title = "Fishing",
+        description = "🎣 Congratulations! You won the game!",
+        type = "success",
+        duration = 5000
+    })
 else
-   ESX.ShowNotification("Unfortunately, you lost the game.")
+    lib.notify({
+        title = "Fishing",
+        description = "🐟 Unfortunately, you lost the game.",
+        type = "error",
+        duration = 5000
+    })
 end
+
 ```
 https://discord.gg/dEv6tm2epA
