@@ -21,13 +21,22 @@ FishGame = function (shakeIntensity)
     return success
 end
 
-RegisterCommand("fish", function ()
+RegisterCommand("fish", function()
     local success = FishGame()
-
     if success then
-        ESX.ShowNotification("Success")
+        lib.notify({
+            title = "Fishing",
+            description = "You caught a fish! 🎣",
+            type = "success",
+            duration = 5000
+        })
     else
-        ESX.ShowNotification("Failed")
+        lib.notify({
+            title = "Fishing",
+            description = "The fish got away... 🐟",
+            type = "error",
+            duration = 5000
+        })
     end
 end, false)
 
