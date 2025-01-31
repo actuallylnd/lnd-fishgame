@@ -8,7 +8,6 @@ author 'lndd'
 description 'Support: https://discord.gg/dEv6tm2epA'
 
 shared_script {
-    '@es_extended/imports.lua',
     '@ox_lib/init.lua',
 }
 
